@@ -1,0 +1,40 @@
+﻿chordseq
+========
+
+.. automodule:: chordseq
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      find
+      ngrams
+      parse_query
+      parse_roman
+      search
+      to_roman
+      to_roman_sequence
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      Match
+      Query
+   
+   .. rubric:: Exceptions
+
+   .. autosummary::
+   
+      QueryError
+   
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :recursive:
+
+   query
+   roman
+   tokens

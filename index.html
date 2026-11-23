@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<link rel="alternate" type="text/markdown" href="index.html.md">
+<link rel="describedby" href="llms.txt" type="text/markdown">
+<link rel="alternate" type="text/markdown" href="index.html.md">
+<link rel="describedby" href="llms.txt">
+    <title>chordseq &#8212; chordseq</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=75c7c72ae941e8b558d8" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=75c7c72ae941e8b558d8" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d75fae25" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx_autodoc_typehints.css?v=057ac668" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/epythet.css?v=86155bdc" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="_static/scripts/fontawesome.js?digest=75c7c72ae941e8b558d8"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=75c7c72ae941e8b558d8" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=75c7c72ae941e8b558d8" />
+
+    <script src="_static/documentation_options.js?v=d45e8c67"></script>
+    <script src="_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=fd10adb8"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'index';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="API reference" href="api.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="color-scheme" content="light dark"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="0.0.1" />
+  
+    
+    <script src="_static/searchtools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button type="button" class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation" aria-expanded="false" aria-controls="pst-primary-sidebar-modal">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="#">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">chordseq</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="api.html">
+    API reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button type="button" class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button type="button" class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg me-1"></i>System Settings</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg me-1"></i>Light</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/thorwhalen/chordseq" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i><span class="visually-hidden">GitHub</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button type="button" class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button type="button" class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page" aria-expanded="false" aria-controls="pst-secondary-sidebar-modal">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal" tabindex="-1"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="api.html">
+    API reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button type="button" class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg me-1"></i>System Settings</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg me-1"></i>Light</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/thorwhalen/chordseq" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i><span class="visually-hidden">GitHub</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none"></div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <!-- generated by epythet -->
+<section id="chordseq">
+<h1>chordseq<a class="headerlink" href="#chordseq" title="Link to this heading">#</a></h1>
+<p>Search chord progressions in any key, count n-grams, and name chords by key. Pure Python, one dependency (<a class="reference external" href="https://pypi.org/project/chordsym/">chordsym</a>).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">chordseq</span><span class="w"> </span><span class="kn">import</span> <span class="n">find</span><span class="p">,</span> <span class="n">ngrams</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sequence</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Dm"</span><span class="p">,</span> <span class="s2">"Bb"</span><span class="p">,</span> <span class="s2">"F"</span><span class="p">,</span> <span class="s2">"C"</span><span class="p">,</span> <span class="s2">"Dm"</span><span class="p">,</span> <span class="s2">"Bb"</span><span class="p">,</span> <span class="s2">"F"</span><span class="p">,</span> <span class="s2">"C"</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">[(</span><span class="n">m</span><span class="o">.</span><span class="n">start</span><span class="p">,</span> <span class="n">m</span><span class="o">.</span><span class="n">stop</span><span class="p">)</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">find</span><span class="p">(</span><span class="s2">"vi IV I V"</span><span class="p">,</span> <span class="n">sequence</span><span class="p">)]</span>   <span class="c1"># Roman numerals: any key</span>
+<span class="go">[(0, 4), (4, 8)]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">m</span><span class="o">.</span><span class="n">transposition</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">find</span><span class="p">(</span><span class="s2">"Am F C G"</span><span class="p">,</span> <span class="n">sequence</span><span class="p">)]</span>       <span class="c1"># chord symbols: any key too</span>
+<span class="go">[5, 5]</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">chordseq</span></code></p>
+<section id="one-command-test-on-real-data">
+<h2>One-command test on real data<a class="headerlink" href="#one-command-test-on-real-data" title="Link to this heading">#</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pytest<span class="w"> </span>tests/test_smoke.py
+</pre></div>
+</div>
+<p>It reads the first Chordonomicon progressions over the public datasets-server API (standard library only; skipped offline), searches them and counts their 4-grams. The same by hand:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">chordseq</span><span class="w"> </span><span class="kn">import</span> <span class="n">find</span><span class="p">,</span> <span class="n">ngrams</span>
+<span class="n">progressions</span> <span class="o">=</span> <span class="p">[</span><span class="n">row</span><span class="o">.</span><span class="n">split</span><span class="p">()</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">chordonomicon_rows</span><span class="p">]</span>       <span class="c1"># "&lt;verse_1&gt; C G Amin F ..."</span>
+<span class="n">hits</span> <span class="o">=</span> <span class="p">[</span><span class="n">m</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">progressions</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">find</span><span class="p">(</span><span class="s2">"Amin F C G"</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">dialect</span><span class="o">=</span><span class="s2">"chordonomicon"</span><span class="p">)]</span>
+<span class="n">ngrams</span><span class="p">(</span><span class="n">progressions</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">dialect</span><span class="o">=</span><span class="s2">"chordonomicon"</span><span class="p">)</span><span class="o">.</span><span class="n">most_common</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="the-query">
+<h2>The query<a class="headerlink" href="#the-query" title="Link to this heading">#</a></h2>
+<p>Whitespace-separated items, like a regular expression over chords:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Means</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Am</span></code>, <code class="docutils literal notranslate"><span class="pre">E7</span></code>, <code class="docutils literal notranslate"><span class="pre">F#m7b5</span></code></p></td>
+<td><p>a chord symbol</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">vi</span></code>, <code class="docutils literal notranslate"><span class="pre">V7</span></code>, <code class="docutils literal notranslate"><span class="pre">bVII</span></code>, <code class="docutils literal notranslate"><span class="pre">ii</span></code>, <code class="docutils literal notranslate"><span class="pre">viiø7</span></code></p></td>
+<td><p>a Roman numeral (upper major, lower minor, <code class="docutils literal notranslate"><span class="pre">°</span></code> <code class="docutils literal notranslate"><span class="pre">ø</span></code> <code class="docutils literal notranslate"><span class="pre">+</span></code> <code class="docutils literal notranslate"><span class="pre">sus</span></code>)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">.</span></code></p></td>
+<td><p>any one chord</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">E|E7</span></code></p></td>
+<td><p>either (no spaces)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">E7?</span></code></p></td>
+<td><p>optional</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">*</span></code> (alone, or after an item)</p></td>
+<td><p>any run of chords, as few as will do</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">E(7)</span></code> is refused with a hint: parentheses already mean alterations in chord symbols. Chord symbols and Roman numerals do not mix in a query.</p>
+</section>
+<section id="defaults">
+<h2>Defaults<a class="headerlink" href="#defaults" title="Link to this heading">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">level=&quot;triads&quot;</span></code> (<code class="docutils literal notranslate"><span class="pre">E</span></code> matches <code class="docutils literal notranslate"><span class="pre">E7</span></code>; <code class="docutils literal notranslate"><span class="pre">&quot;root&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">&quot;tetrads&quot;</span></code> are the other mir_eval levels), transposition-invariant, inversions ignored, repeated chords collapsed. <code class="docutils literal notranslate"><span class="pre">transposition_invariant=False</span></code> matches the query’s own key: chord symbols as written, Roman numerals against <code class="docutils literal notranslate"><span class="pre">key=</span></code>.</p>
+</section>
+<section id="sequences-payloads-matches">
+<h2>Sequences, payloads, matches<a class="headerlink" href="#sequences-payloads-matches" title="Link to this heading">#</a></h2>
+<p>A sequence is an iterable of chord symbols, each optionally <code class="docutils literal notranslate"><span class="pre">(symbol,</span> <span class="pre">payload)</span></code> with any payload you like (a time, a bar, a page). <code class="docutils literal notranslate"><span class="pre">find(query,</span> <span class="pre">sequence)</span></code> returns <code class="docutils literal notranslate"><span class="pre">Match</span></code> objects: <code class="docutils literal notranslate"><span class="pre">start</span></code>/<code class="docutils literal notranslate"><span class="pre">stop</span></code> are indices into the sequence as you gave it (so collapsed repeats are covered), <code class="docutils literal notranslate"><span class="pre">items</span></code>, <code class="docutils literal notranslate"><span class="pre">symbols</span></code>, <code class="docutils literal notranslate"><span class="pre">payloads</span></code>, <code class="docutils literal notranslate"><span class="pre">transposition</span></code>. <code class="docutils literal notranslate"><span class="pre">search(query,</span> <span class="pre">sequences)</span></code> does many sequences lazily, with <code class="docutils literal notranslate"><span class="pre">sequence_index</span></code>. The engine knows nothing about audio, pages or songs; you map spans to times or pages through the payloads. Anything that is not a chord (<code class="docutils literal notranslate"><span class="pre">N</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;verse_1&gt;</span></code>) matches nothing, so no match runs across it: cut a song into sections and the matches stay inside them.</p>
+</section>
+<section id="n-grams-and-roman-numerals">
+<h2>N-grams and Roman numerals<a class="headerlink" href="#n-grams-and-roman-numerals" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ngrams</span><span class="p">(</span><span class="n">sequences</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>                      <span class="c1"># pooled Counter of tuples, in the key of each sequence</span>
+<span class="n">ngrams</span><span class="p">(</span><span class="n">sequences</span><span class="p">,</span> <span class="n">relative_to</span><span class="o">=</span><span class="s2">"first"</span><span class="p">)</span>              <span class="c1"># keyless: numerals from each n-gram's first chord</span>
+<span class="n">ngrams</span><span class="p">(</span><span class="n">sequences</span><span class="p">,</span> <span class="n">relative_to</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">per_sequence</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">to_roman_sequence</span><span class="p">([</span><span class="s2">"G"</span><span class="p">,</span> <span class="s2">"D"</span><span class="p">,</span> <span class="s2">"Em"</span><span class="p">,</span> <span class="s2">"C"</span><span class="p">])</span>            <span class="c1"># ['I', 'V', 'vi', 'IV']</span>
+</pre></div>
+</div>
+<p>Roman numerals use one chromatic scheme from the tonic, major or minor key alike (<code class="docutils literal notranslate"><span class="pre">bIII</span></code>, <code class="docutils literal notranslate"><span class="pre">bVI</span></code>, <code class="docutils literal notranslate"><span class="pre">bVII</span></code> in a minor key), so <code class="docutils literal notranslate"><span class="pre">to_roman</span></code> and the query read each other.</p>
+</section>
+<section id="seams">
+<h2>Seams<a class="headerlink" href="#seams" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Seam</p></th>
+<th class="head"><p>Keyword</p></th>
+<th class="head"><p>Default</p></th>
+<th class="head"><p>Replacement that exists</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Chord spelling of the input</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">dialect=</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;default&quot;</span></code> (chart spellings)</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">chordsym.DIALECTS</span></code> (<code class="docutils literal notranslate"><span class="pre">chordonomicon</span></code>, <code class="docutils literal notranslate"><span class="pre">harte</span></code>), <code class="docutils literal notranslate"><span class="pre">chordsym.register_dialect</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Detail of comparison</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">level=</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;triads&quot;</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;root&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;tetrads&quot;</span></code> (mir_eval names)</p></td>
+</tr>
+<tr class="row-even"><td><p>Key for Roman numerals</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">key=</span></code></p></td>
+<td><p>estimated by <code class="docutils literal notranslate"><span class="pre">chordsym.estimate_key</span></code></p></td>
+<td><p>any <code class="docutils literal notranslate"><span class="pre">chordsym.Key</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>NOT seams (v1):</strong> the scan engine (one regex pass per transposition over a string of one-character tokens; the packed-byte numpy scan of the phase-1 prototypes, in <code class="docutils literal notranslate"><span class="pre">misc/docs/research/prototypes/</span></code>, is the replacement when a corpus-sized consumer needs it, and then it lands behind the same <code class="docutils literal notranslate"><span class="pre">search</span></code> signature); an index; ranking and popularity; a browser or Web Worker build; a CLI; audio, pages and songs (callers map spans through payloads); chord symbols beyond what <code class="docutils literal notranslate"><span class="pre">chordsym</span></code> parses.</p>
+</section>
+<section id="design-and-research">
+<h2>Design and research<a class="headerlink" href="#design-and-research" title="Link to this heading">#</a></h2>
+<p>The phase-1 design, five research reports and prototypes are in <code class="docutils literal notranslate"><span class="pre">misc/docs/research/</span></code>.</p>
+<p class="epythet-aggregates">This documentation as a single file: <a href="chordseq.md">chordseq.md</a> (Markdown, for agents).</p>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+</section>
+
+<p class="epythet-provenance" style="font-size:.8em;opacity:.65;margin-top:2.5em;text-align:right">built 2026-11-23 15:55 UTC from <a href="https://github.com/thorwhalen/chordseq/commit/6ce3555ad8b271f304a955663b44184dc34995cb">6ce3555</a> (main) · chordseq 0.0.1 · <a href="about-this-build.html">about this build</a></p>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="right-next"
+       href="api.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">API reference</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal" tabindex="-1"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#one-command-test-on-real-data">One-command test on real data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-query">The query</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#defaults">Defaults</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sequences-payloads-matches">Sequences, payloads, matches</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#n-grams-and-roman-numerals">N-grams and Roman numerals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#seams">Seams</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#design-and-research">Design and research</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="_sources/index.md.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=75c7c72ae941e8b558d8"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=75c7c72ae941e8b558d8"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.24.0.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

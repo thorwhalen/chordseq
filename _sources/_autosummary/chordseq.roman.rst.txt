@@ -1,0 +1,16 @@
+chordseq.roman
+==============
+
+.. automodule:: chordseq.roman
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      is_roman
+      parse_roman
+      roman_from_parts
+      to_roman
+      to_roman_sequence
+   

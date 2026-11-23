@@ -1,0 +1,22 @@
+# chordseq
+
+> Chord-progression search in any key, n-gram counts and Roman numerals over chord-symbol sequences
+
+
+## Pages
+
+- [chordseq](index.html.md): Search chord progressions in any key, count n-grams, and name chords by key. Pure Python, one depend...
+- [API reference](api.html.md): | &#96;chordseq&#96;   | chordseq: search chord progressions in any key, count n-grams, name chords by key. ...
+- [chordseq](_autosummary/chordseq.html.md): chordseq: search chord progressions in any key, count n-grams, name chords by key.
+- [chordseq.query](_autosummary/chordseq.query.html.md): The query notation: regex-shaped, over plain chord symbols or Roman numerals.
+- [chordseq.roman](_autosummary/chordseq.roman.html.md): Roman numerals: chords relative to a key, both ways.
+- [chordseq.tokens](_autosummary/chordseq.tokens.html.md): Chord symbols to comparable tokens, at one of three levels of detail.
+- [About this build](about-this-build.html.md): This documentation was built on &#42;&#42;2026-11-23 15:55 UTC&#42;&#42; from commit &lt;a href="https://github.com/tho...
+
+## Optional
+
+- [chordseq.md](chordseq.md): Complete documentation in a single file.
+
+## Build
+
+- [build_info.json](build_info.json): build provenance (commit, version, tool versions, whether the docs match the package)

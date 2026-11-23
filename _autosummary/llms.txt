@@ -1,0 +1,15 @@
+# chordseq
+
+> Chord-progression search in any key, n-gram counts and Roman numerals over chord-symbol sequences
+
+
+## Pages in this subsection
+
+- [chordseq](chordseq.html.md): chordseq: search chord progressions in any key, count n-grams, name chords by key.
+- [chordseq.query](chordseq.query.html.md): The query notation: regex-shaped, over plain chord symbols or Roman numerals.
+- [chordseq.roman](chordseq.roman.html.md): Roman numerals: chords relative to a key, both ways.
+- [chordseq.tokens](chordseq.tokens.html.md): Chord symbols to comparable tokens, at one of three levels of detail.
+
+## Optional
+
+- [Top-level llms.txt](../llms.txt): Complete documentation index.

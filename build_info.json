@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "built_at": "2026-11-23T15:55:10Z",
+  "package": {
+    "name": "chordseq",
+    "version": "0.0.1",
+    "display_name": "chordseq",
+    "source": "pyproject.toml"
+  },
+  "git": {
+    "available": true,
+    "commit": "6ce3555ad8b271f304a955663b44184dc34995cb",
+    "short_commit": "6ce3555",
+    "branch": "main",
+    "tags": [],
+    "dirty": false,
+    "remote_url": "https://github.com/thorwhalen/chordseq",
+    "commit_url": "https://github.com/thorwhalen/chordseq/commit/6ce3555ad8b271f304a955663b44184dc34995cb",
+    "error": null
+  },
+  "ci": {
+    "provider": "github",
+    "repository": "thorwhalen/chordseq",
+    "sha": "6ce3555ad8b271f304a955663b44184dc34995cb",
+    "sha_in_history": true,
+    "ref": "refs/heads/main",
+    "ref_name": "main",
+    "run_id": "45210334729",
+    "run_url": "https://github.com/thorwhalen/chordseq/actions/runs/45210334729",
+    "server_url": "https://github.com"
+  },
+  "tools": {
+    "epythet": "0.2.25",
+    "sphinx": "9.1.1",
+    "docutils": "0.22.4",
+    "python": "3.12.16"
+  },
+  "config": {
+    "theme": "auto",
+    "html_theme": "pydata_sphinx_theme",
+    "accent": "#93332d",
+    "mode": "auto",
+    "api_generator": "autosummary",
+    "ignore": [
+      "tests/",
+      "scrap/",
+      "examples/"
+    ],
+    "agent_outputs": true,
+    "aggregates": [
+      "md"
+    ],
+    "ai_artifacts": true,
+    "provenance": true,
+    "docs_dir": "docsrc"
+  },
+  "site": {
+    "modules_documented": 4,
+    "objects_documented": 29
+  },
+  "pypi": {
+    "checked": true,
+    "latest": null,
+    "relation": "unknown",
+    "error": null
+  },
+  "reproduce": "git clone https://github.com/thorwhalen/chordseq && cd chordseq\ngit checkout 6ce3555ad8b271f304a955663b44184dc34995cb\npip install \"epythet==0.2.25\"\nepythet quickstart . --ignore tests/ scrap/ examples/",
+  "warnings": [],
+  "alignment": {
+    "aligned": true,
+    "notes": []
+  }
+}

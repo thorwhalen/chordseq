@@ -1,0 +1,25 @@
+chordseq.query
+==============
+
+.. automodule:: chordseq.query
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      parse_query
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      Item
+      Query
+   
+   .. rubric:: Exceptions
+
+   .. autosummary::
+   
+      QueryError
+   
