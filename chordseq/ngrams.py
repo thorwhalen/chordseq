@@ -41,7 +41,13 @@ from chordseq.tokens import (
 DEFAULT_SIZES = (2, 3, 4)
 _RELATIVE_TO = ("key", "first", None)
 _ROOT_NAMES = ("C", "C#", "D", "Eb", "E", "F", "F#", "G", "Ab", "A", "Bb", "B")
-_TRIAD_SUFFIX = {"major": "", "minor": "m", "diminished": "dim", "augmented": "aug", "open": "sus"}
+_TRIAD_SUFFIX = {
+    "major": "",
+    "minor": "m",
+    "diminished": "dim",
+    "augmented": "aug",
+    "open": "sus",
+}
 _SEVENTH_SUFFIX = {"": "", "7": "7", "maj7": "maj7", "dim7": "7"}
 
 
@@ -71,7 +77,9 @@ def ngrams(
     """
     check_level(level)
     if relative_to not in _RELATIVE_TO:
-        raise ValueError(f"relative_to must be one of {_RELATIVE_TO}, not {relative_to!r}")
+        raise ValueError(
+            f"relative_to must be one of {_RELATIVE_TO}, not {relative_to!r}"
+        )
     sizes = (n,) if isinstance(n, int) else tuple(n)
     if not sizes or min(sizes) < 1:
         raise ValueError(f"n-gram sizes must be positive, not {sizes!r}")

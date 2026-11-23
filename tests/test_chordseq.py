@@ -51,7 +51,9 @@ def test_non_chords_break_matches():
 def test_roman_query_and_key():
     seq = ["Dm", "Bb", "F", "C"]
     assert spans("vi IV I V", seq) == [(0, 4)]
-    assert spans("vi IV I V", seq, transposition_invariant=False, key=Key(5)) == [(0, 4)]
+    assert spans("vi IV I V", seq, transposition_invariant=False, key=Key(5)) == [
+        (0, 4)
+    ]
     assert spans("vi IV I V", seq, transposition_invariant=False, key=Key(0)) == []
     with pytest.raises(ValueError, match="key"):
         find("vi IV", seq, transposition_invariant=False)
@@ -82,7 +84,9 @@ def test_ngram_levels_and_relativity():
     assert ngrams([seq], 2, level="tetrads")[("I", "V7")] == 1
     assert ngrams([seq], 2)[("I", "V")] == 1
     assert ngrams([seq], 2, relative_to="first")[("I", "V")] == 1
-    assert ngrams([seq], 2, relative_to=None)[("G7", "Am")] == 0  # triads level drops the 7
+    assert (
+        ngrams([seq], 2, relative_to=None)[("G7", "Am")] == 0
+    )  # triads level drops the 7
     assert ngrams([seq], 2, relative_to=None)[("G", "Am")] == 1
 
 

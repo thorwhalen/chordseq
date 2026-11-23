@@ -31,7 +31,20 @@ from chordseq.tokens import (
     chord_parts,
 )
 
-NUMERALS = ("I", "bII", "II", "bIII", "III", "IV", "#IV", "V", "bVI", "VI", "bVII", "VII")
+NUMERALS = (
+    "I",
+    "bII",
+    "II",
+    "bIII",
+    "III",
+    "IV",
+    "#IV",
+    "V",
+    "bVI",
+    "VI",
+    "bVII",
+    "VII",
+)
 _DEGREE = {"I": 0, "II": 2, "III": 4, "IV": 5, "V": 7, "VI": 9, "VII": 11}
 _ROMAN_RE = re.compile(
     r"(?P<acc>[b#]?)(?P<num>VII|VI|IV|V|III|II|I|vii|vi|iv|v|iii|ii|i)"

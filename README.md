@@ -23,7 +23,8 @@ It reads the first Chordonomicon progressions over the public datasets-server AP
 
 ```python
 from chordseq import find, ngrams
-progressions = [row.split() for row in chordonomicon_rows]       # "<verse_1> C G Amin F ..."
+
+progressions = [row.split() for row in chordonomicon_rows]  # "<verse_1> C G Amin F ..."
 hits = [m for p in progressions for m in find("Amin F C G", p, dialect="chordonomicon")]
 ngrams(progressions, n=4, dialect="chordonomicon").most_common(5)
 ```
@@ -54,10 +55,12 @@ A sequence is an iterable of chord symbols, each optionally `(symbol, payload)` 
 ## N-grams and Roman numerals
 
 ```python
-ngrams(sequences, n=(2, 3, 4))                      # pooled Counter of tuples, in the key of each sequence
-ngrams(sequences, relative_to="first")              # keyless: numerals from each n-gram's first chord
+ngrams(sequences, n=(2, 3, 4))  # pooled Counter of tuples, in the key of each sequence
+ngrams(
+    sequences, relative_to="first"
+)  # keyless: numerals from each n-gram's first chord
 ngrams(sequences, relative_to=None, per_sequence=True)
-to_roman_sequence(["G", "D", "Em", "C"])            # ['I', 'V', 'vi', 'IV']
+to_roman_sequence(["G", "D", "Em", "C"])  # ['I', 'V', 'vi', 'IV']
 ```
 
 Roman numerals use one chromatic scheme from the tonic, major or minor key alike (`bIII`, `bVI`, `bVII` in a minor key), so `to_roman` and the query read each other.

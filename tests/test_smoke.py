@@ -20,7 +20,13 @@ N_ROWS = 20
 
 def chordonomicon_progressions(n=N_ROWS):
     query = urllib.parse.urlencode(
-        dict(dataset="ailsntua/Chordonomicon", config="default", split="train", offset=0, length=n)
+        dict(
+            dataset="ailsntua/Chordonomicon",
+            config="default",
+            split="train",
+            offset=0,
+            length=n,
+        )
     )
     with urllib.request.urlopen(f"{ROWS_URL}?{query}", timeout=30) as response:
         rows = json.load(response)["rows"]
@@ -44,6 +50,14 @@ def test_real_progressions(progressions):
     (gram, count), *_ = counts.most_common(1)
     assert count >= 1 and len(gram) == 4
     # The same query, transposed, finds at least what the literal one does.
-    literal = [m for p in progressions for m in find("C F G", p, dialect="chordonomicon", transposition_invariant=False)]
-    anykey = [m for p in progressions for m in find("C F G", p, dialect="chordonomicon")]
+    literal = [
+        m
+        for p in progressions
+        for m in find(
+            "C F G", p, dialect="chordonomicon", transposition_invariant=False
+        )
+    ]
+    anykey = [
+        m for p in progressions for m in find("C F G", p, dialect="chordonomicon")
+    ]
     assert len(anykey) >= len(literal)

@@ -160,9 +160,7 @@ def encode(
     """
     check_level(level)
     items = list(sequence)
-    chars = [
-        token(split_item(item)[0], level=level, dialect=dialect) for item in items
-    ]
+    chars = [token(split_item(item)[0], level=level, dialect=dialect) for item in items]
     if collapse:
         return collapse_runs(chars), items
     return [(c, i, i) for i, c in enumerate(chars)], items
